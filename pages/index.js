@@ -1,38 +1,22 @@
-import Development from "../components/Development";
+import { client } from '../lib/client' 
 
-const developments = [
-  {
-    id: 1,
-    name: "Gwynfaen",
-    location: "Newport, NP10 2DD",
-    minBeds: 1,
-    maxBeds: 5,
-    imagePath: "/images/gwynfaen/main.jpg"
-  },
-  {
-    id: 1,
-    name: "Woodland Grove",
-    location: "Newport, NP10 2DD",
-    minBeds: 1,
-    maxBeds: 3,
-    imagePath: "/images/woodlandgrove/main.jpg"
-  },
-  {
-    id: 1,
-    name: "Development 3",
-    location: "Newport, NP10 2DD",
-    minBeds: 1,
-    maxBeds: 4,
-    imagePath: "/images/gwynfaen/4.jpg"
-  }
-]
+import { Development } from "../components";
 
-export default function Home() {
+export default function Home({ developments }) {
   return (
     <div>
-      {developments.map((d, index) => (
-        <Development key={index} development={d} reverse={index % 2 != 0} />
+      {developments.map((development, index) => (
+        <Development key={index} development={development} reverse={index % 2 != 0} />
       ))}
     </div>
   )
+}
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "development"] | order(_createdAt asc)'
+  const developments = await client.fetch(query)
+
+  return {
+    props: { developments }
+  }
 }
