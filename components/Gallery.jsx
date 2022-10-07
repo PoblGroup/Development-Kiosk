@@ -26,7 +26,9 @@ const Gallery = ({gallery}) => {
             className="object-cover" 
         /> */}
         {tempSrc && (
-          <img src={urlFor(tempSrc)} alt="test" className="object-cover" />
+          <>
+            <img src={urlFor(tempSrc).url()} alt="test" className="object-cover" />
+          </>
         )}
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" strokeWidth="1.5" stroke="currentColor" onClick={() => setModal(false)}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
