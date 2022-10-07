@@ -30,7 +30,7 @@ const gwynfaen = () => {
             <section className="flex flex-col w-full h-auto px-16 justify-center items-center">
                 {/* Hero Image */}
                 <div className="image-container object-cover overflow-hidden w-full h-auto relative px-16 py-10">
-                    <Image
+                    {/* <Image
                         src="/images/gwynfaen/main.jpg" 
                         alt="Development" 
                         placeholder='blur'
@@ -39,7 +39,7 @@ const gwynfaen = () => {
                         height={220} 
                         layout='responsive' 
                         className="object-cover rounded-md" 
-                    />
+                    /> */}
                 </div>
                 {/* Page Intro */}
                 <div className="flex flex-col w-full justify-center items-center my-10">
