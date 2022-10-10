@@ -4,23 +4,6 @@ import Navigation from '../components/Navigation'
 
 const gwynfaen = () => {
 
-    const gallery = [
-        { title: "Gwynfean House Type 13", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 13 v1_Y_Ffion_Variation_Plot 36and37.jpg" },
-        { title: "Gwynfean House Type 13", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 13 v2_Y_Ffion_Plot 30and31.jpg" },
-        { title: "Gwynfean House Type 13", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 13 v4_Y_Ffion_Gable_Plot 14and15.jpg" },
-        { title: "Gwynfean House Type 14", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 14 v1_Yr_Eirlys_Plot 43to46.jpg" },
-        { title: "Gwynfean House Type 14", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 14 v2_Yr_Eirlys_Plot 18to20.jpg" },
-        { title: "Gwynfean House Type 14", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 14 v3_Yr_Eirlys_Gable_Plot 76and77.jpg" },
-        { title: "Gwynfean House Type 16", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 16 v1_Y_Rhosyn_Plot_40and41.jpg" },
-        { title: "Gwynfean House Type 16", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 16 v3_Y_Rhosyn_Gable_Plot_135and136.jpg" },
-        { title: "Gwynfean House Type 16", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 16 v4_Y_Rhosyn_Gable_Variation_Plot_132.jpg" },
-        { title: "Gwynfean House Type 17", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 17 v3_Y_Masarn_Variation_Plot_127.jpg" },
-        { title: "Gwynfean House Type 17", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 17 v4_Y_Masarn_Plot_120.jpg" },
-        { title: "Gwynfean House Type 18", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 18 v2_Y_Lili_Plot_75.jpg" },
-        { title: "Gwynfean House Type 18", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 18 v4_Y_Lili_Plot_32.jpg" },
-        { title: "Gwynfean House Type 19", imagePath: "/images/gwynfaen/gallery/Gwynfean_HT 19 v1_Y_Derwen_Plot_85.jpg" },
-    ]
-
     return (
         <div className=''>
 
@@ -52,7 +35,7 @@ const gwynfaen = () => {
             <section id="Animation" className="flex flex-col w-full h-screen justify-center items-center bg-gray-100">
                 <div className='flex flex-row justify-evenly w-full'>
                     <div className="image-container object-cover overflow-hidden w-5/6 h-auto relative px-16 mb-10">
-                        <Image
+                        {/* <Image
                             src="/images/gwynfaen/main.jpg" 
                             alt="Development" 
                             placeholder='blur'
@@ -61,7 +44,7 @@ const gwynfaen = () => {
                             height={220} 
                             layout='responsive' 
                             className="object-cover rounded-md" 
-                        />
+                        /> */}
                     </div>
                     <div className='w-1/2 h-full flex flex-col justify-center items-left'>
                         <p className='text-2xl'>Animation</p>
@@ -98,7 +81,7 @@ const gwynfaen = () => {
                         </a>
                     </div>
                     <div className="image-container object-cover overflow-hidden w-5/6 h-auto relative mb-10">
-                        <Image
+                        {/* <Image
                             src="/streetviewmap.jpg" 
                             alt="Development" 
                             placeholder='blur'
@@ -107,7 +90,7 @@ const gwynfaen = () => {
                             height={220} 
                             layout='responsive' 
                             className="object-cover rounded-md" 
-                        />
+                        /> */}
                     </div>
                 </div>
             </section>
