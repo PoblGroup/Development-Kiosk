@@ -27,7 +27,7 @@ const Gallery = ({gallery}) => {
         /> */}
         {tempSrc && (
           <>
-            {/* <img src={urlFor(tempSrc).url()} alt="test" className="object-cover" /> */}
+            <img src={urlFor(tempSrc).url()} alt="test" className="object-cover" />
           </>
         )}
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" strokeWidth="1.5" stroke="currentColor" onClick={() => setModal(false)}>
@@ -37,7 +37,7 @@ const Gallery = ({gallery}) => {
       <div className="gallery grid gap-6 grid-cols-4 lg:grid-cols-4">
           {gallery?.map((item, i) => (
               <div key={i} className="w-48 h-48 rounded-md">
-                  {/* <img src={urlFor(item)} alt="test" className="object-cover rounded-md w-full h-full" onClick={() => GetImage(item)} /> */}
+                  <img src={urlFor(item)} alt="test" className="object-cover rounded-md w-full h-full" onClick={() => GetImage(item)} />
                   {/* <Image
                       src={item.imagePath} 
                       alt={item.title} 

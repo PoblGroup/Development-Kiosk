@@ -23,7 +23,7 @@ const DevelopmentDetails = ({ development }) => {
                         layout='responsive' 
                         className="object-cover rounded-md" 
                     /> */}
-                    {/* <img src={urlFor(image)} alt="headphones" className="object-cover rounded-md w-4/5 m-auto" /> */}
+                    <img src={urlFor(image)} alt="headphones" className="object-cover rounded-md w-4/5 m-auto" />
                 </div>
                 {/* Page Intro */}
                 <div className="flex flex-col w-full justify-center items-center my-10">
