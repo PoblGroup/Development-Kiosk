@@ -5,6 +5,8 @@ import { client, urlFor } from '../../lib/client'
 
 const DevelopmentDetails = ({ development }) => {
     const { image, name, details, gallery } = development
+    console.log(gallery)
+
     return (
         <div>
             <Navigation />
