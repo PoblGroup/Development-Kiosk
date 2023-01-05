@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Navigation, Gallery } from '../../components'
 
 import { client, urlFor } from '../../lib/client'
 
 const DevelopmentDetails = ({ development }) => {
+    const [videoPlaying, setVideoPlaying] = useState(false)
     const { image, name, details, gallery } = development
-    console.log(gallery)
+
+    const playVideo = (e) => {
+        e.preventDefault()
+        setVideoPlaying(true)
+        const myVideo = document.getElementById('PromoVideo')
+        myVideo.play()
+    }
+
+    const pauseVideo = (e) => {
+        e.preventDefault()
+        setVideoPlaying(false)
+        const myVideo = document.getElementById('PromoVideo')
+        myVideo.pause()
+    }
 
     return (
         <div>
@@ -48,18 +62,34 @@ const DevelopmentDetails = ({ development }) => {
                             layout='responsive' 
                             className="object-cover rounded-md" 
                         /> */}
+                        <video id="PromoVideo" controls poster="/images/gwynfaen/main.jpg" className='w-full rounded-md'>
+                            <source src="../videos/gwynfaen.mp4" />
+                        </video>
                     </div>
                     <div className='w-1/2 h-full flex flex-col justify-center items-left'>
                         <p className='text-2xl'>Animation</p>
-                        <p className='py-10 w-5/6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat.</p>
+                        <p className='py-10 w-5/6'>Check out our promotion video here.</p>
+                        {videoPlaying ? (
                         <a 
                             href=""
+                            onClick={(e) => pauseVideo(e)}
                             className='flex justify-start bg-teal-600 text-white rounded w-40 py-2 px-4 item-center hover:bg-teal-600/70'>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-3">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
-                            </svg> Play Video
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-3">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                            </svg>
+                            Pause Video
                         </a>
+                        ) : (
+                        <a 
+                            href=""
+                            onClick={(e) => playVideo(e)}
+                            className='flex justify-start bg-teal-600 text-white rounded w-40 py-2 px-4 item-center hover:bg-teal-600/70'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-3">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                            </svg>
+                            Play Video
+                        </a>
+                        )}
                     </div>
                 </div>
             </section>

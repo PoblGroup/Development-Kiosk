@@ -19,7 +19,10 @@ const Development = ({development, reverse}) => {
                 height={420} 
                 layout='responsive' 
                 className="object-cover rounded-md" /> */}
-                <img src={urlFor(development.image)} alt="headphones" className="object-cover rounded-md" />
+                {(development.image) 
+                    ? <img src={urlFor(development.image)} alt="headphones" className="object-cover rounded-md" /> 
+                    : null
+                }
             </div>
 
             <div className="development-info w-1/2 p-16">
